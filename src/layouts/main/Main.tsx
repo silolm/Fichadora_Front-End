@@ -1,18 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import LoginScreen from "./screens/LogIn";
-import SignUpScreen from "./screens/SingUp";
+import SignUpScreen from "../../screens/SingUp";
+import SidebarNav from "./components/sidebar";
 import "./App.css";
-import SidebarNav from "./layouts/main/components/sidebar";
 
-function App() {
+function Main() {
   return (
     <Router>
       <SidebarNav open variant={"permanent"}/>
       <Switch>
-        <Route path="/LogIn">
-          <LoginScreen/>
-        </Route>
         <Route path="/SignUp">
           <SignUpScreen/>
         </Route>
@@ -21,4 +17,4 @@ function App() {
   );
 }
 
-export default App;
+export default Main;
