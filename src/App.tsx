@@ -1,23 +1,18 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import LoginScreen from "./screens/LogIn";
-import SignUpScreen from "./screens/SingUp";
-import "./App.css";
-import SidebarNav from "./layouts/main/components/sidebar";
+import { BrowserRouter as Router } from "react-router-dom";
+import { ThemeProvider } from "@material-ui/styles";
+import { Routes } from "./Routes";
+import theme from "./theme";
+
+//import "./App.css";
 
 function App() {
   return (
-    <Router>
-      <SidebarNav open variant={"permanent"}/>
-      <Switch>
-        <Route path="/LogIn">
-          <LoginScreen/>
-        </Route>
-        <Route path="/SignUp">
-          <SignUpScreen/>
-        </Route>
-      </Switch>
-    </Router>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <Routes/>
+      </Router>
+    </ThemeProvider>
   );
 }
 

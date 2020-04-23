@@ -1,17 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import LogInScreen from "../../screens/LogIn";
-import "./App.css";
 
-function Main() {
+//import "./App.css";
+
+interface IProps {
+  children: any
+}
+
+function Main({ children }: IProps) {
   return (
-    <Router>
-      <Switch>
-        <Route path="/LogIn">
-          <LogInScreen/>
-        </Route>
-      </Switch>
-    </Router>
+    <div>
+      {children}
+    </div>
   );
 }
 
