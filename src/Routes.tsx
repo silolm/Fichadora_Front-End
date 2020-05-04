@@ -5,11 +5,13 @@ import MainLayout from "./layouts/main/Main";
 import LogIn from "./screens/LogIn";
 import LogInLayout from "./layouts/login";
 import SignUp from "./screens/SingUp";
+import Employee from "./screens/Employee";
 
 export const Routes = () => (
   <Switch>
     <RouteWithLayout screen={LogIn} layout={LogInLayout} path="/LogIn"/>
     <RouteWithLayout screen={SignUp} layout={MainLayout} path="/SignUp"/>
     <RouteWithLayout screen={LogIn} layout={MainLayout} path="/prueba"/>
+    <RouteWithLayout screen={Employee} layout={MainLayout} path="/employee"/>
   </Switch>
 );
