@@ -11,7 +11,7 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import SessionService from "../services/session-service";
+import SessionService from "../services/authService";
 import Cookies from "universal-cookie";
 import { Link as LinkSignUp, useHistory } from "react-router-dom";
 
