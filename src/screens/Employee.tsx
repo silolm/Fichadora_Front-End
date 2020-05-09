@@ -5,6 +5,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { makeStyles } from "@material-ui/core/styles";
 import { ExitToApp, MarkunreadMailboxOutlined, MeetingRoom, Pause, PersonOutlined, PlayArrow, Timer } from "@material-ui/icons";
 import { ButtonGroup, Typography } from "@material-ui/core";
+import useAuth from "../myHooks/useAuth";
 
 function styledBy(color: string, param2: { default: string; blue: string }) {
   return undefined;
@@ -46,6 +47,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function Employee() {
   const classes = useStyles();
+  const {token} = useAuth();
 
   return (
     <Container component="main" maxWidth="xs">

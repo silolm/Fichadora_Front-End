@@ -11,9 +11,8 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import SessionService from "../services/authService";
-import Cookies from "universal-cookie";
 import { Link as LinkSignUp, useHistory } from "react-router-dom";
+import useAuth from "../myHooks/useAuth";
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -40,12 +39,13 @@ export default function SignIn() {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
   const history = useHistory();
+  const { login } = useAuth();
 
   async function handleSignIn() {
-    let result = await SessionService.login(user, password);
+    let result = await login(user, password);
 
     if (result) {
-      let date = new Date();
+      /*let date = new Date();
       date.setTime(date.getTime() + (60 * 60 * 1000));
       const cookies = new Cookies();
       cookies.set(
@@ -53,9 +53,9 @@ export default function SignIn() {
         {
           path: "/",
           expires: date
-        });
-      history.push("/prueba");
-    }
+        });*/
+      history.push("/employee");
+    } else alert("Zorra");
   }
 
   return (

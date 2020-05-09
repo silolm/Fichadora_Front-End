@@ -3,12 +3,6 @@ import { Divider, Drawer } from "@material-ui/core";
 import DashboardIcon from "@material-ui/icons/Dashboard";
 import PeopleIcon from "@material-ui/icons/People";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
-import TextFieldsIcon from "@material-ui/icons/TextFields";
-import ImageIcon from "@material-ui/icons/Image";
-import AccountBoxIcon from "@material-ui/icons/AccountBox";
-import SettingsIcon from "@material-ui/icons/Settings";
-import LockOpenIcon from "@material-ui/icons/LockOpen";
-
 import SidebarNav from "./components/sidebarNav";
 import "./styles.css";
 import { makeStyles } from "@material-ui/styles";
@@ -16,7 +10,7 @@ import clsx from "clsx";
 
 const useStyles = makeStyles((theme: any) => ({
   drawer: {
-    width: 240,
+    width: 240
   },
   root: {
     backgroundColor: "#fff",
@@ -45,8 +39,8 @@ const Sidebar = ({ open, variant, onClose, className }: IProps) => {
 
   const pages = [
     {
-      title: "Login",
-      href: "/LogIn",
+      title: "List",
+      href: "/Rabo",
       icon: <DashboardIcon/>
     },
     {
@@ -58,31 +52,6 @@ const Sidebar = ({ open, variant, onClose, className }: IProps) => {
       title: "Employee",
       href: "/employee",
       icon: <ShoppingBasketIcon/>
-    },
-    {
-      title: "Authentication",
-      href: "/sign-in",
-      icon: <LockOpenIcon/>
-    },
-    {
-      title: "Typography",
-      href: "/typography",
-      icon: <TextFieldsIcon/>
-    },
-    {
-      title: "Icons",
-      href: "/icons",
-      icon: <ImageIcon/>
-    },
-    {
-      title: "Account",
-      href: "/account",
-      icon: <AccountBoxIcon/>
-    },
-    {
-      title: "Settings",
-      href: "/settings",
-      icon: <SettingsIcon/>
     }
   ];
 
