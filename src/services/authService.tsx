@@ -1,6 +1,5 @@
 async function login(nickname: String, password: String): Promise<false | string> {
-  const url = "http://192.168.0.146:3001";
-  //const url = "http://localhost:3001";
+  const url = "http://localhost:3000";
 
   const result = await fetch(`${url}/login`, {
     method: "POST",

@@ -3,9 +3,17 @@ import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { makeStyles } from "@material-ui/core/styles";
-import { ExitToApp, MarkunreadMailboxOutlined, MeetingRoom, Pause, PersonOutlined, PlayArrow, Timer } from "@material-ui/icons";
+import {
+  ExitToApp,
+  MarkunreadMailboxOutlined,
+  MeetingRoom,
+  Pause,
+  PersonOutlined,
+  PlayArrow,
+  Timer
+} from "@material-ui/icons";
 import { ButtonGroup, Typography } from "@material-ui/core";
-import useAuth from "../myHooks/useAuth";
+import useClockInOut from "../myHooks/useClockInOut";
 
 function styledBy(color: string, param2: { default: string; blue: string }) {
   return undefined;
@@ -47,7 +55,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function Employee() {
   const classes = useStyles();
-  const {token} = useAuth();
+  const { clockIn, pauseOut, pauseIn, clockInOut, clockOut } = useClockInOut();
 
   return (
     <Container component="main" maxWidth="xs">
@@ -60,24 +68,28 @@ export default function Employee() {
             fullWidth
             className={classes.botonera}
             startIcon={<ExitToApp/>}
+            onClick={clockIn}
           >
             Entrada</Button>
           <Button
             fullWidth
             className={classes.botonera}
             startIcon={<Pause/>}
+            onClick={pauseIn}
           >
             Pausa</Button>
           <Button
             fullWidth
             className={classes.botonera}
             startIcon={<PlayArrow/>}
+            onClick={pauseOut}
           >
             Volver</Button>
           <Button
             fullWidth
             className={classes.botonera}
             startIcon={<MeetingRoom/>}
+            onClick={clockOut}
           >
             Salida</Button>
 
