@@ -55,7 +55,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function Employee() {
   const classes = useStyles();
-  const { clockIn, pauseOut, pauseIn, clockInOut, clockOut } = useClockInOut();
+  const { clockIn, pauseOut, pauseIn, clockOut } = useClockInOut();
 
   return (
     <Container component="main" maxWidth="xs">

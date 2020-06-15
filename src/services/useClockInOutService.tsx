@@ -1,5 +1,4 @@
 import useAuth from "../myHooks/useAuth";
-import React from "react";
 
 function useClockInOutService() {
   const { token } = useAuth();

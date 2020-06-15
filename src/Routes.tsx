@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect, Switch } from "react-router-dom";
+import { Switch } from "react-router-dom";
 import { RouteWithLayout } from "./components/routeWithLayout/routeWithLayout";
 import MainLayout from "./layouts/main/Main";
 import LogIn from "./screens/LogIn";

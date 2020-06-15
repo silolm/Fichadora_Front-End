@@ -9,7 +9,7 @@ export default function useClockInOut() {
   const { get, setClock, updateClock } = useClockInOutService();
 
   async function clockIn() {
-    const { id } = await setClock(DNI, new Date);
+    const { id } = await setClock(DNI, new Date());
     const lastClock = await get(id);
     if (setClockInOut) setClockInOut(lastClock);
   }
