@@ -4,7 +4,7 @@ function useClockInOutService() {
   const { token } = useAuth();
 
   async function setClock(employee: String, checkIn: Date): Promise<{ id: string }> {
-    const url = "http://localhost/clockInOut";
+    const url = `http://mario.vozfusion.es/clockInOut`;
 
     const result = await fetch(url, {
       method: "POST",
@@ -25,7 +25,7 @@ function useClockInOutService() {
   }
 
   async function updateClock(content: any): Promise<void> {
-    const url = `http://localhost/clockInOut/`;
+    const url = `http://mario.vozfusion.es/clockInOut/`;
 
     const result = await fetch(url, {
       method: "PUT",
@@ -42,7 +42,7 @@ function useClockInOutService() {
   }
 
   const get = async (employee ?: string) => {
-    const url = `http://localhost/clockInOut${employee ? "?employee=" + employee : ""}`;
+    const url = `http://mario.vozfusion.es/clockInOut${employee ? "?employee=" + employee : ""}`;
 
     const result = await fetch(url, {
       method: "GET",

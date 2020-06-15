@@ -1,5 +1,5 @@
 async function login(nickname: String, password: String): Promise<false | string> {
-  const url = "http://localhost:3000";
+  const url = `http://mario.vozfusion.es:3000`;
 
   const result = await fetch(`${url}/login`, {
     method: "POST",
