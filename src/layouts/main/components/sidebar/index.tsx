@@ -54,7 +54,7 @@ const Sidebar = ({ open, variant, onClose, className }: IProps) => {
       icon: <ShoppingBasketIcon/>
     },{
       title: "List",
-      href: "/list",
+      href: "/listItem",
       icon: <ShoppingBasketIcon/>
     }
   ];

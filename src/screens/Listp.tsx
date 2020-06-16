@@ -1,33 +1,39 @@
-import React from 'react';
-import { createStyles, Theme, makeStyles } from '@material-ui/core/styles';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import StarIcon from '@material-ui/icons/Star';
+import React from "react";
+import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import { ListItem } from "../components/listItem";
+import { Container } from "@material-ui/core";
+import "../components/listItem/styles.scss";
+
+const hardcode = [
+  {
+    DNI: "03151484R",
+    name: "mario",
+    lastName: "silla"
+  },
+  {
+    DNI: "03151484R",
+    name: "Paco",
+    lastName: "silla"
+  },
+  {
+    DNI: "03151484R",
+    name: "Ramon",
+    lastName: "silla"
+  }];
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      width: '100%',
-      maxWidth: 360,
-      backgroundColor: theme.palette.background.paper,
-      color: 'black'
-    },
-  }),
+      width: "100%",
+      color: "black"
+    }
+  })
 );
 
 export default function Listp() {
-  const classes = useStyles();
-
   return (
-    <List component="nav" className={classes.root} aria-label="contacts">
-      <ListItem button>
-        <ListItemText primary="Chelsea Otakan" />
-      </ListItem>
-      <ListItem button>
-        <ListItemText primary="Eric Hoffman" />
-      </ListItem>
-    </List>
+    <Container component="main" id='container'>
+      {hardcode.map(item => <ListItem DNI={item.DNI} lastName={item.lastName} name={item.name}/>)}
+    </Container>
   );
 }

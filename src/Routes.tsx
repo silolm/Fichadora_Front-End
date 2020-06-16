@@ -13,6 +13,6 @@ export const Routes = () => (
     <RouteWithLayout screen={LogIn} layout={LogInLayout} path="/LogIn"/>
     <RouteWithLayout screen={SignUp} layout={MainLayout} isPrivate={true} path="/SignUp"/>
     <RouteWithLayout screen={Employee} layout={MainLayout} isPrivate={true} path="/employee"/>
-    <RouteWithLayout screen={Listp} layout={MainLayout} isPrivate={true} path="/list"/>
+    <RouteWithLayout screen={Listp} layout={MainLayout} isPrivate={true} path="/listItem"/>
   </Switch>
 );

@@ -1,0 +1,65 @@
+//#container{
+//  margin-top: 8px;
+//  display: flex;
+//  flex-direction: column;
+//  align-items: center;
+//}
+$color-inactivo: rgba(0, 0, 0, 0.4);
+$color-hover: #ffa400;
+$color-starbucks: #036635;
+
+
+%centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#container {
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+  width: 60%;
+}
+
+.listEmployees {
+  @extend %centrado;
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 15%;
+
+  .containerEmployee {
+    @extend %centrado;
+    width: 100%;
+    height: 40px;
+    //background-color: #45322E;
+    background-image: url("../../assets/fondo.jpg");
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    flex-direction: column;
+    border-radius: 15px;
+    text-align: center;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+      transition: 0.8s ease;
+    }
+
+    * {
+      margin: 5px;
+    }
+
+    img {
+      width: 25px;
+      height: 25px;
+      border-radius: 5px;
+    }
+
+    .info {
+      user-select: text;
+      font-size: 18px;
+      color: #daef06;
+    }
+  }
+}
