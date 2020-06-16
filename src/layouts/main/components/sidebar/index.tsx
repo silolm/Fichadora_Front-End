@@ -52,6 +52,10 @@ const Sidebar = ({ open, variant, onClose, className }: IProps) => {
       title: "Employee",
       href: "/employee",
       icon: <ShoppingBasketIcon/>
+    },{
+      title: "List",
+      href: "/list",
+      icon: <ShoppingBasketIcon/>
     }
   ];
 

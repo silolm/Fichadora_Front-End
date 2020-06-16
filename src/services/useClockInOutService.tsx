@@ -1,4 +1,5 @@
 import useAuth from "../myHooks/useAuth";
+import { formatter } from "../utils/formatter";
 
 function useClockInOutService() {
   const { token } = useAuth();
@@ -14,7 +15,7 @@ function useClockInOutService() {
       },
       body: JSON.stringify({
         employee: employee,
-        in: checkIn.toLocaleString()
+        in: formatter(checkIn)
       })
     });
 

@@ -2,6 +2,7 @@ import useAuth from "./useAuth";
 import useClockInOutService from "../services/useClockInOutService";
 import { useContext } from "react";
 import { ClockInOutContext } from "../providers/clockInOutProvider";
+import { formatter } from "../utils/formatter";
 
 export default function useClockInOut() {
   const { DNI } = useAuth();
@@ -19,7 +20,7 @@ export default function useClockInOut() {
 
     // @ts-ignore
     updateClock(clockInOut.id, {
-      ...clockInOut, out: (new Date()).toLocaleString()
+      ...clockInOut, out: formatter(new Date())
     });
   }
 
@@ -28,7 +29,7 @@ export default function useClockInOut() {
 
     // @ts-ignore
     updateClock(clockInOut.id, {
-      ...clockInOut, pauseIn: (new Date()).toLocaleString()
+      ...clockInOut, pauseIn: formatter(new Date())
     });
   }
 
@@ -37,7 +38,7 @@ export default function useClockInOut() {
 
     // @ts-ignore
     updateClock(clockInOut.id, {
-      ...clockInOut, pauseOut: (new Date()).toLocaleString()
+      ...clockInOut, pauseOut: formatter(new Date())
     });
   }
 
