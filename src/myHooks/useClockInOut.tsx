@@ -19,7 +19,7 @@ export default function useClockInOut() {
 
     // @ts-ignore
     updateClock(clockInOut.id, {
-      ...clockInOut, out: new Date()
+      ...clockInOut, out: (new Date()).toLocaleString()
     });
   }
 
@@ -28,7 +28,7 @@ export default function useClockInOut() {
 
     // @ts-ignore
     updateClock(clockInOut.id, {
-      ...clockInOut, pauseIn: new Date()
+      ...clockInOut, pauseIn: (new Date()).toLocaleString()
     });
   }
 
@@ -37,7 +37,7 @@ export default function useClockInOut() {
 
     // @ts-ignore
     updateClock(clockInOut.id, {
-      ...clockInOut, pauseOut: new Date()
+      ...clockInOut, pauseOut: (new Date()).toLocaleString()
     });
   }
 
