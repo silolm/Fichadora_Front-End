@@ -19,8 +19,7 @@ export default function useClockInOut() {
   function clockOut() {
     if (!clockInOut) return;
 
-    // @ts-ignore
-    updateClock(clockInOut.id, {
+    updateClock({
       ...clockInOut, out: formatter(new Date())
     });
   }
@@ -28,8 +27,7 @@ export default function useClockInOut() {
   function pauseIn() {
     if (!clockInOut) return;
 
-    // @ts-ignore
-    updateClock(clockInOut.id, {
+    updateClock({
       ...clockInOut, pauseIn: formatter(new Date())
     });
   }
@@ -37,8 +35,7 @@ export default function useClockInOut() {
   function pauseOut() {
     if (!clockInOut) return;
 
-    // @ts-ignore
-    updateClock(clockInOut.id, {
+    updateClock({
       ...clockInOut, pauseOut: formatter(new Date())
     });
   }
