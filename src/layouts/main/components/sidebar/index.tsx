@@ -1,8 +1,8 @@
 import React from "react";
 import { Divider, Drawer } from "@material-ui/core";
-import DashboardIcon from "@material-ui/icons/Dashboard";
-import PeopleIcon from "@material-ui/icons/People";
-import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+import PersonAdd from "@material-ui/icons/PersonAdd";
+import User from "@material-ui/icons/AccountCircle";
+import List from "@material-ui/icons/List";
 import SidebarNav from "./components/sidebarNav";
 import "./styles.css";
 import { makeStyles } from "@material-ui/styles";
@@ -40,23 +40,20 @@ const Sidebar = ({ open, variant, onClose, className }: IProps) => {
   const pages = [
     {
       title: "List",
-      href: "/Rabo",
-      icon: <DashboardIcon/>
-    },
-    {
-      title: "Signup",
-      href: "/SignUp",
-      icon: <PeopleIcon/>
+      href: "/listItem",
+      icon: <List/>
     },
     {
       title: "Employee",
       href: "/employee",
-      icon: <ShoppingBasketIcon/>
-    },{
-      title: "List",
-      href: "/listItem",
-      icon: <ShoppingBasketIcon/>
+      icon: <User/>
+    },
+    {
+      title: "Signup",
+      href: "/SignUp",
+      icon: <PersonAdd/>
     }
+
   ];
 
   return (

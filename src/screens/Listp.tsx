@@ -21,15 +21,6 @@ const hardcode = [
     lastName: "silla"
   }];
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      width: "100%",
-      color: "black"
-    }
-  })
-);
-
 export default function Listp() {
   return (
     <Container component="main" id='container'>
