@@ -20,25 +20,28 @@ export default function useClockInOut() {
   function clockOut() {
     if (!clockInOut) return;
 
-    updateClock({
-      ...clockInOut, out: formatter(new Date())
-    });
+    const newClock = { ...clockInOut, out: formatter(new Date()) };
+    // @ts-ignore
+    setClockInOut(newClock);
+    updateClock(newClock);
   }
 
   function pauseIn() {
     if (!clockInOut) return;
 
-    updateClock({
-      ...clockInOut, pauseIn: formatter(new Date())
-    });
+    const newClock = { ...clockInOut, pauseIn: formatter(new Date()) };
+    // @ts-ignore
+    setClockInOut(newClock);
+    updateClock(newClock);
   }
 
   function pauseOut() {
     if (!clockInOut) return;
 
-    updateClock({
-      ...clockInOut, pauseOut: formatter(new Date())
-    });
+    const newClock = { ...clockInOut, pauseOut: formatter(new Date()) };
+    // @ts-ignore
+    setClockInOut(newClock);
+    updateClock(newClock);
   }
 
   return {
