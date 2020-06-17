@@ -13,6 +13,7 @@ export default function useClockInOut() {
     const { id } = await setClock(DNI, new Date());
     const allClock = await get(DNI);
     const lastClock = allClock[allClock.length - 1];
+    Object.keys(lastClock).forEach((key: any) => lastClock[key] = lastClock[key] === "" ? null : lastClock[key]);
     if (setClockInOut) setClockInOut(lastClock);
   }
 
