@@ -4,6 +4,7 @@ import { ThemeProvider } from "@material-ui/styles";
 import { Routes } from "./Routes";
 import theme from "./theme";
 import { AuthProvider } from "./providers/authProvider";
+import { ClockInOutProvider } from "./providers/clockInOutProvider";
 
 //import "./App.css";
 
@@ -11,9 +12,11 @@ function App() {
   return (
     <AuthProvider>
       <ThemeProvider theme={theme}>
-        <Router>
-          <Routes/>
-        </Router>
+        <ClockInOutProvider>
+          <Router>
+            <Routes/>
+          </Router>
+        </ClockInOutProvider>
       </ThemeProvider>
     </AuthProvider>
   );

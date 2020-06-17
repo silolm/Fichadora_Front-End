@@ -13,7 +13,7 @@ interface IProps {
   children: ReactNode
 }
 
-export const AuthProvider = ({ children }: IProps) => {
+export const ClockInOutProvider = ({ children }: IProps) => {
   const [clockInOut, setClockInOut] = useState<IClockInOut | undefined>(undefined);
 
   return (
