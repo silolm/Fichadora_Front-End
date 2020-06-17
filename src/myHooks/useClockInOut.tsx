@@ -11,7 +11,8 @@ export default function useClockInOut() {
 
   async function clockIn() {
     const { id } = await setClock(DNI, new Date());
-    const lastClock = await get(id);
+    const allClock = await get(DNI);
+    const lastClock = allClock[allClock.length - 1];
     if (setClockInOut) setClockInOut(lastClock);
   }
 

@@ -99,7 +99,7 @@ export default function SignUp() {
                 fullWidth
                 name="rPassword"
                 label="Repeat Password"
-                type="rPassword"
+                type="Password"
                 id="rPassword"
                 autoComplete="current-rPassword"
               />
